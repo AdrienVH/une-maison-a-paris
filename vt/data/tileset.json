@@ -1,0 +1,26 @@
+{
+  "tilejson": "2.1.0",
+  "tiles": ["http://localhost:7502/tiles/{z}/{x}/{y}.mvt"],
+  "vector_layers": [
+    {
+      "id": "maisons",
+      "queries": [
+        {
+          "minzoom": 13,
+          "maxzoom": 20,
+          "sql": "SELECT imb_id::integer AS id, jsonb_build_object('type', 'maison') AS tags, wkb_geometry AS geom FROM postgis_01_batiments WHERE imb_type = 'PA'"
+        }
+      ]
+    },
+    {
+      "id": "immeubles",
+      "queries": [
+        {
+          "minzoom": 13,
+          "maxzoom": 20,
+          "sql": "SELECT imb_id::integer AS id, jsonb_build_object('type', 'immeuble') AS tags, wkb_geometry AS geom FROM postgis_01_batiments WHERE imb_type = 'IM'"
+        }
+      ]
+    }
+  ]
+}

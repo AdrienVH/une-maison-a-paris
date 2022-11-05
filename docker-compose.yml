@@ -1,0 +1,25 @@
+version: "3"
+services:
+  front:
+    build: ./front/
+    ports:
+      - "7501:80"
+  vt:
+    build: ./vt/
+    environment:
+      - PGHOST=db
+      - PGPORT=5432
+      - PGUSER=batiments
+      - PGPASSWORD=batiments
+      - PGDATABASE=batiments
+    ports:
+      - "7502:9000"
+    volumes:
+      - ./vt/data/tileset.json:/opt/baremaps/tileset.json
+      - ./vt/data/style.json:/opt/baremaps/style.json
+    depends_on:
+      - "db"
+  db:
+    build: ./db/
+    ports:
+      - "7503:5432"

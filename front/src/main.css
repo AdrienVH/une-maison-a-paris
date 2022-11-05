@@ -1,0 +1,68 @@
+body, html {
+    position:relative;
+    height:100%;
+    width:100%;
+}
+
+section {
+    position:relative;
+    height:100%;
+    width:100%;
+}
+
+/****** CARTE */
+
+div#map {
+    height:100%;
+    width:100%;
+    background-color:#eff0f0;
+}
+
+/****** QUARTIERS */
+
+ul#quartiers {
+    position:absolute;
+    top:20px;
+    left:0px;
+    right:0px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+ul#quartiers li {
+    padding:15px;
+    background-color:rgba(255, 255, 255, 1.0);
+    font-size:20px;
+    font-family:'Playfair Display', serif;
+    color:black;
+    border-radius:10px;
+    cursor:pointer;
+    box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/****** ENCART */
+
+#encart {
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    left:20px;
+    padding:15px;
+    background-color:rgba(255, 255, 255, 1.0);
+    font-size:20px;
+    font-family:'Playfair Display', serif;
+    color:black;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#encart span {
+    font-weight: bold;
+}
+
+#encart a {
+    text-decoration: none;
+    color:black;
+}

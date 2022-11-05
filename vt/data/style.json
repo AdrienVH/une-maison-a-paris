@@ -1,0 +1,44 @@
+{
+    "version" : 8,
+    "metadata" : { "maputnik:renderer" : "mbgljs" },
+    "center" : [ 2.346824, 48.855017  ],
+    "zoom" : 16,
+    "sources" : {
+        "baremaps" : {
+        "type" : "vector",
+        "url" : "http://localhost:7502/tiles.json"
+        }
+    },
+    "layers" : [
+        {
+            "id" : "maisons",
+            "type" : "circle",
+            "source" : "baremaps",
+            "source-layer" : "maisons",
+            "layout" : { "visibility" : "visible" },
+            "minzoom" : 13,
+            "maxzoom" : 19,
+            "paint" : {
+                "circle-color" : "#82c91e",
+                "circle-radius" : 4,
+                "circle-stroke-color" : "white",
+                "circle-stroke-width" : 1
+            }
+        },
+        {
+            "id" : "immeubles",
+            "type" : "circle",
+            "source" : "baremaps",
+            "source-layer" : "immeubles",
+            "layout" : { "visibility" : "visible" },
+            "minzoom" : 13,
+            "maxzoom" : 19,
+            "paint" : {
+                "circle-color" : "#15aabf",
+                "circle-radius" : 4,
+                "circle-stroke-color" : "white",
+                "circle-stroke-width" : 1
+            }
+        }
+    ]
+}
