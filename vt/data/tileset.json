@@ -8,7 +8,7 @@
         {
           "minzoom": 13,
           "maxzoom": 20,
-          "sql": "SELECT imb_id::integer AS id, jsonb_build_object('type', 'maison') AS tags, wkb_geometry AS geom FROM postgis_01_batiments WHERE imb_type = 'PA'"
+          "sql": "SELECT imb_id::integer AS id, jsonb_build_object('type', 'maison') AS tags, wkb_geometry AS geom FROM postgis_01_maisons"
         }
       ]
     },
@@ -18,7 +18,7 @@
         {
           "minzoom": 13,
           "maxzoom": 20,
-          "sql": "SELECT imb_id::integer AS id, jsonb_build_object('type', 'immeuble') AS tags, wkb_geometry AS geom FROM postgis_01_batiments WHERE imb_type = 'IM'"
+          "sql": "SELECT imb_id::integer AS id, jsonb_build_object('type', 'immeuble') AS tags, wkb_geometry AS geom FROM postgis_02_immeubles"
         }
       ]
     }

@@ -1,2 +1,2 @@
 # une-maison-a-paris
-Une maison à Paris
+Une Maison à Paris

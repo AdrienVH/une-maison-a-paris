@@ -23,7 +23,3 @@ services:
     build: ./db/
     ports:
       - "7503:5432"
-networks:
-  ingress:
-    name: gateway_ingress
-    external: true
